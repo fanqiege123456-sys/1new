@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "cd git-net-disk && go build -o main main.go"
+
+[deploy]
+startCommand = "cd git-net-disk && ./main"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
